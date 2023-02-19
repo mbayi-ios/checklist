@@ -14,6 +14,7 @@
 		89445EDD29A0048D00959116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89445EDC29A0048D00959116 /* Assets.xcassets */; };
 		89445EE029A0048D00959116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89445EDE29A0048D00959116 /* LaunchScreen.storyboard */; };
 		89445EE829A24C7600959116 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89445EE729A24C7600959116 /* ChecklistItem.swift */; };
+		89445EEA29A2720D00959116 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89445EE929A2720D00959116 /* AddItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		89445EDF29A0048D00959116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89445EE129A0048D00959116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89445EE729A24C7600959116 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
+		89445EE929A2720D00959116 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				89445EDC29A0048D00959116 /* Assets.xcassets */,
 				89445EDE29A0048D00959116 /* LaunchScreen.storyboard */,
 				89445EE129A0048D00959116 /* Info.plist */,
+				89445EE929A2720D00959116 /* AddItemViewController.swift */,
 			);
 			path = Checklist;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89445EEA29A2720D00959116 /* AddItemViewController.swift in Sources */,
 				89445ED829A0048C00959116 /* ChecklistViewController.swift in Sources */,
 				89445ED429A0048C00959116 /* AppDelegate.swift in Sources */,
 				89445ED629A0048C00959116 /* SceneDelegate.swift in Sources */,
