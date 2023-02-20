@@ -17,26 +17,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="jWl-fc-oLg">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="jWl-fc-oLg">
                                 <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jWl-fc-oLg" id="nAe-Vh-Yie">
-                                    <rect key="frame" x="0.0" y="0.0" width="370" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="351.5" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tea-Kb-TCP">
-                                            <rect key="frame" x="20" y="10" width="330" height="21"/>
+                                            <rect key="frame" x="47" y="10" width="41.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="√" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxI-Pi-mUc">
+                                            <rect key="frame" x="20" y="5" width="12" height="26"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Tea-Kb-TCP" firstAttribute="leading" secondItem="nAe-Vh-Yie" secondAttribute="leading" constant="20" id="QA9-sV-i9E"/>
-                                        <constraint firstItem="Tea-Kb-TCP" firstAttribute="top" secondItem="nAe-Vh-Yie" secondAttribute="topMargin" constant="-1" id="UEb-Iw-qoF"/>
-                                        <constraint firstAttribute="trailing" secondItem="Tea-Kb-TCP" secondAttribute="trailing" constant="20" id="mYf-wm-89n"/>
+                                        <constraint firstItem="Tea-Kb-TCP" firstAttribute="leading" secondItem="uxI-Pi-mUc" secondAttribute="trailing" constant="15" id="4YD-Ve-32r"/>
+                                        <constraint firstItem="Tea-Kb-TCP" firstAttribute="firstBaseline" secondItem="uxI-Pi-mUc" secondAttribute="baseline" id="7fH-Vj-Yof"/>
+                                        <constraint firstItem="Tea-Kb-TCP" firstAttribute="top" secondItem="nAe-Vh-Yie" secondAttribute="topMargin" constant="-1" id="7oI-pO-HiE"/>
+                                        <constraint firstItem="uxI-Pi-mUc" firstAttribute="leading" secondItem="nAe-Vh-Yie" secondAttribute="leading" constant="20" symbolic="YES" id="kcf-eQ-wUw"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="jPa-bb-JZK" kind="show" identifier="EditItem" trigger="accessoryAction" id="UqF-MC-6uh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -54,7 +64,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NtI-Te-gk1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="488" y="24"/>
+            <point key="canvasLocation" x="486.95652173913049" y="23.4375"/>
         </scene>
         <!--Add Item-->
         <scene sceneID="cDc-l9-yXB">
@@ -118,6 +128,13 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X14-mC-CEU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XLp-pI-hLh">
+                    <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </objects>
             <point key="canvasLocation" x="1197" y="23"/>
         </scene>
@@ -140,6 +157,9 @@
             <point key="canvasLocation" x="-252.17391304347828" y="60.9375"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="UqF-MC-6uh"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
