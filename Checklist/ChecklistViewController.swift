@@ -7,7 +7,21 @@
 
 import UIKit
 
-class ChecklistViewController: UITableViewController, UITextFieldDelegate {
+class ChecklistViewController: UITableViewController, AddItemViewControllerDelegate {
+    func addItemViewControllerDidCancel(_ controller: AddItemViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+
+    func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem) {
+        let newRowIndex = items.count
+        items.append(item)
+
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+        navigationController?.popViewController(animated: true)
+    }
+
 
 
 
@@ -44,19 +58,6 @@ class ChecklistViewController: UITableViewController, UITextFieldDelegate {
         items.append(item5)
     }
 
-
-    // MARK: - Actions
-    @IBAction func addItem() {
-        let newRowIndex = items.count
-
-        let item = ChecklistItem()
-        item.text = "I am a new row"
-        items.append(item)
-
-        let indexPath = IndexPath(row: newRowIndex, section: 0)
-        let indexPaths = [indexPath]
-        tableView.insertRows(at: indexPaths, with: .automatic)
-    }
 
     // MARK: - Table View Data Source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int  {
@@ -101,6 +102,14 @@ class ChecklistViewController: UITableViewController, UITextFieldDelegate {
         items.remove(at: indexPath.row)
         let indexPaths = [indexPath]
         tableView.deleteRows(at: indexPaths, with: .automatic)
+    }
+
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddItem" {
+            let controller = segue.destination as! AddItemViewController
+            controller.delegate = self
+        }
     }
 
 }

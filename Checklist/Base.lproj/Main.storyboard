@@ -47,7 +47,7 @@
                     <navigationItem key="navigationItem" title="Checklist" id="77u-OR-sVH">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wvw-x9-F9j">
                             <connections>
-                                <segue destination="jPa-bb-JZK" kind="show" id="3ym-1l-Obq"/>
+                                <segue destination="jPa-bb-JZK" kind="show" identifier="AddItem" id="yBg-5M-sFu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -106,7 +106,7 @@
                                 <action selector="cancel" destination="jPa-bb-JZK" id="dnr-ig-3NW"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="stb-cb-Kce">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="stb-cb-Kce">
                             <connections>
                                 <action selector="done" destination="jPa-bb-JZK" id="Fqt-If-JZS"/>
                             </connections>
@@ -119,7 +119,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X14-mC-CEU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1198.5507246376812" y="7.3660714285714279"/>
+            <point key="canvasLocation" x="1197" y="23"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PSg-U6-WHG">
