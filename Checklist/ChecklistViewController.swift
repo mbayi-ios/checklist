@@ -13,36 +13,10 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         navigationController?.navigationBar.prefersLargeTitles = true
 
-        let item1 = ChecklistItem()
-        item1.text = "Walk the dog"
-        item1.checked = true
-        items.append(item1)
-
-        let item2 = ChecklistItem()
-        item2.text = "Brush my teeth"
-        item2.checked = false
-        items.append(item2)
-
-        let item3 = ChecklistItem()
-        item3.text = "Learn iOS development"
-        item3.checked = false
-        items.append(item3)
-
-        let item4 = ChecklistItem()
-        item4.text = "Soccer practice"
-        item4.checked = false
-        items.append(item4)
-
-        let item5 = ChecklistItem()
-        item5.text = "Eat Ice cream"
-        item5.checked = true
-        items.append(item5)
-
-        print("Documents folder is \(documentsDirectory())")
-        print("Data file path is \(dataFilePath())")
+        // load items
+        loadChecklistItems()
 
     }
 
@@ -161,6 +135,20 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
         } catch {
             print("error encoding item array: \(error.localizedDescription)")
+        }
+    }
+
+    func loadChecklistItems() {
+        let path = dataFilePath()
+
+        if let data  = try? Data(contentsOf: path) {
+            let decoder = PropertyListDecoder()
+
+            do {
+                items = try decoder.decode([ChecklistItem].self, from: data)
+            } catch {
+                print("Error decoding item array: \(error.localizedDescription)")
+            }
         }
     }
 
