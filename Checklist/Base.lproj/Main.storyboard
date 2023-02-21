@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Checklist-->
+        <!--Name of the Checklist-->
         <scene sceneID="KJ8-GX-JSu">
             <objects>
                 <tableViewController id="MkX-46-0LM" customClass="ChecklistViewController" customModule="Checklist" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +54,7 @@
                             <outlet property="delegate" destination="MkX-46-0LM" id="FrI-Ce-ElW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklist" id="77u-OR-sVH">
+                    <navigationItem key="navigationItem" title="Name of the Checklist" largeTitleDisplayMode="never" id="77u-OR-sVH">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wvw-x9-F9j">
                             <connections>
                                 <segue destination="jPa-bb-JZK" kind="show" identifier="AddItem" id="yBg-5M-sFu"/>
@@ -138,6 +138,19 @@
             </objects>
             <point key="canvasLocation" x="1197" y="23"/>
         </scene>
+        <!--All Lists-->
+        <scene sceneID="KRy-kK-2dw">
+            <objects>
+                <tableViewController id="YIE-0F-f4e" userLabel="All Lists" customClass="AllListsViewController" customModule="Checklist" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Checklists" id="Iah-VE-3Pe"/>
+                    <connections>
+                        <segue destination="MkX-46-0LM" kind="show" identifier="ShowChecklist" id="qbr-zz-ans"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8pu-RJ-h5K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="-650"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="PSg-U6-WHG">
             <objects>
@@ -149,7 +162,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MkX-46-0LM" kind="relationship" relationship="rootViewController" id="Xbe-kU-1eL"/>
+                        <segue destination="YIE-0F-f4e" kind="relationship" relationship="rootViewController" id="0BD-VV-yqH"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="655-q6-ok3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
