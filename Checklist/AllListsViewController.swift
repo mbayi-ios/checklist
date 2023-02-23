@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate {
+class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate, UINavigationControllerDelegate {
     func listDetailViewControllerDidCancel(_ controller: ListDetailViewController) {
         navigationController?.popViewController(animated: true)
     }
@@ -50,6 +50,17 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
 
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.delegate = self
+
+        let index = UserDefaults.standard.integer(forKey: "ChecklistIndex")
+        if index != -1 {
+            let checklist = dataModel.lists[index]
+            performSegue( withIdentifier: "ShowChecklist", sender: checklist)
+        }
+    }
+
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,9 +80,11 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let checklist = dataModel.lists[indexPath.row]
+        UserDefaults.standard.set(indexPath.row, forKey: "ChecklistIndex")
 
+        let checklist = dataModel.lists[indexPath.row]
         performSegue(withIdentifier: "ShowChecklist", sender: checklist)
+
     }
 
     // MARK: - Navigation
@@ -99,6 +112,13 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         controller.checklistToEdit = checklist
 
         navigationController?.pushViewController(controller, animated: true)
+    }
+
+    // MARK: - Navigation Controller Delegates
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool){
+        if viewController === self {
+            UserDefaults.standard.set(-1, forKey: "ChecklistIndex")
+        }
     }
 
  
