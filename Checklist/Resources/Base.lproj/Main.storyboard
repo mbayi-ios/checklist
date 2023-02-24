@@ -244,6 +244,68 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="hob-h1-sT7">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="wvJ-5T-eZG">
+                                        <rect key="frame" x="0.0" y="86" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wvJ-5T-eZG" id="WGp-95-tJL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminde Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZx-1b-mhW">
+                                                    <rect key="frame" x="20" y="11" width="309" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nU9-O5-g71">
+                                                    <rect key="frame" x="337" y="6" width="51" height="31.5"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vZx-1b-mhW" firstAttribute="top" secondItem="WGp-95-tJL" secondAttribute="topMargin" id="CvA-T9-7FM"/>
+                                                <constraint firstItem="nU9-O5-g71" firstAttribute="leading" secondItem="vZx-1b-mhW" secondAttribute="trailing" constant="8" id="Mbg-fp-DBn"/>
+                                                <constraint firstAttribute="bottom" secondItem="nU9-O5-g71" secondAttribute="bottom" constant="6.5" id="OP8-rP-55w"/>
+                                                <constraint firstAttribute="trailing" secondItem="nU9-O5-g71" secondAttribute="trailing" constant="28" id="PC5-UD-Kby"/>
+                                                <constraint firstItem="vZx-1b-mhW" firstAttribute="centerY" secondItem="nU9-O5-g71" secondAttribute="centerY" id="Q16-AJ-74L"/>
+                                                <constraint firstItem="nU9-O5-g71" firstAttribute="top" secondItem="WGp-95-tJL" secondAttribute="top" constant="6" id="dAX-12-E9I"/>
+                                                <constraint firstItem="vZx-1b-mhW" firstAttribute="leading" secondItem="WGp-95-tJL" secondAttribute="leadingMargin" id="zhk-d1-MnZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="P87-wi-fKb">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="9w5-hl-HIe">
+                                        <rect key="frame" x="0.0" y="166" width="414" height="232.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9w5-hl-HIe" id="DgQ-Gz-hFw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="232.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qub-f8-V0x">
+                                                    <rect key="frame" x="20" y="11" width="71" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vHr-zA-Hl4">
+                                                    <rect key="frame" x="74" y="0.0" width="320" height="216.5"/>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="vHr-zA-Hl4" secondAttribute="bottom" constant="16" id="Meb-W2-gHL"/>
+                                                <constraint firstItem="qub-f8-V0x" firstAttribute="leading" secondItem="DgQ-Gz-hFw" secondAttribute="leadingMargin" id="Twa-Dz-9n1"/>
+                                                <constraint firstAttribute="trailing" secondItem="vHr-zA-Hl4" secondAttribute="trailing" constant="20" symbolic="YES" id="YLx-Dj-vL3"/>
+                                                <constraint firstItem="qub-f8-V0x" firstAttribute="top" secondItem="DgQ-Gz-hFw" secondAttribute="topMargin" id="lCW-s6-8nb"/>
+                                                <constraint firstItem="vHr-zA-Hl4" firstAttribute="top" secondItem="DgQ-Gz-hFw" secondAttribute="top" id="mkI-PV-OIo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="jPa-bb-JZK" id="z6t-Ke-mB4"/>
@@ -263,7 +325,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="datePicker" destination="vHr-zA-Hl4" id="adY-Qk-gKZ"/>
                         <outlet property="doneBarButton" destination="stb-cb-Kce" id="EPj-NP-ygU"/>
+                        <outlet property="shouldRemindSwitch" destination="nU9-O5-g71" id="5bX-fK-X54"/>
                         <outlet property="textField" destination="YfO-0I-mLU" id="xtV-ZI-LEV"/>
                     </connections>
                 </tableViewController>
@@ -276,7 +340,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </objects>
-            <point key="canvasLocation" x="2020" y="23"/>
+            <point key="canvasLocation" x="2018.840579710145" y="22.767857142857142"/>
         </scene>
         <!--All Lists-->
         <scene sceneID="KRy-kK-2dw">
