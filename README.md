@@ -13,9 +13,12 @@ The App helps you manage your daily todo tasks.Learning from Ray's book.
 
 | Screenshots | Screenshots |
 | ----- | ---- |
-| <img src="https://user-images.githubusercontent.com/91916741/221280080-3aff3836-3552-455c-b994-45ad19254e50.png" width="50%"> | <img src="https://user-images.githubusercontent.com/91916741/221280093-0af1bcef-68df-4df7-bc5d-5fa832de7eed.png" width="50%" />  |
-| <img src="https://user-images.githubusercontent.com/91916741/221280098-f793e756-20ba-46eb-a3be-90cc785f4f54.png" width="50%" /> |  <img src="https://user-images.githubusercontent.com/91916741/221280100-61fb8ae6-ca65-4a6d-b79b-412333d34bb4.png" width="50%" /> |
+
 | <img src="https://user-images.githubusercontent.com/91916741/221280108-2ac14df1-dd15-4c40-b7c5-318c4827acf3.png" width="50%" /> |  <img src="https://user-images.githubusercontent.com/91916741/221280108-2ac14df1-dd15-4c40-b7c5-318c4827acf3.png" width="50%" /> |
+
+| <img src="https://user-images.githubusercontent.com/91916741/221280098-f793e756-20ba-46eb-a3be-90cc785f4f54.png" width="50%" /> |  <img src="https://user-images.githubusercontent.com/91916741/221280100-61fb8ae6-ca65-4a6d-b79b-412333d34bb4.png" width="50%" /> |
+
+| <img src="https://user-images.githubusercontent.com/91916741/221280080-3aff3836-3552-455c-b994-45ad19254e50.png" width="50%"> | <img src="https://user-images.githubusercontent.com/91916741/221280093-0af1bcef-68df-4df7-bc5d-5fa832de7eed.png" width="50%" />  |
 | ...   | ...  |
 
 
