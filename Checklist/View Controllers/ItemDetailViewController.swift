@@ -59,6 +59,7 @@ class ItemDetailViewController: UITableViewController {
 
             item.shouldRemind = shouldRemindSwitch.isOn
             item.dueDate = datePicker.date
+            item.scheduleNotification()
             delegate?.itemDetailViewController(self, didFinishEditing: item)
         } else {
             let item = ChecklistItem()
@@ -68,6 +69,7 @@ class ItemDetailViewController: UITableViewController {
             item.shouldRemind = shouldRemindSwitch.isOn
 
             item.dueDate = datePicker.date
+            item.scheduleNotification()
             delegate?.itemDetailViewController(self, didFinishAdding: item)
         }
     }
