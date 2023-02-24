@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 class ChecklistItem: NSObject, Codable {
     var text = ""
@@ -19,10 +20,31 @@ class ChecklistItem: NSObject, Codable {
         super.init()
         itemID = DataModel.nextChecklistItemID()
     }
+    
 
     func scheduleNotification() {
         if shouldRemind && dueDate > Date() {
-            print("we should schedule a notification")
+            // 1
+            let content = UNMutableNotificationContent()
+            content.title = "Reminder: "
+            content.body = text
+            content.sound = UNNotificationSound.default
+
+            //2
+            let calendar = Calendar(identifier: .gregorian)
+            let components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: dueDate)
+
+            //3
+            let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+
+            //4
+            let request = UNNotificationRequest(identifier: "\(itemID)", content: content, trigger: trigger)
+
+            //5
+            let center = UNUserNotificationCenter.current()
+            center.add(request)
+
+            print("Scheduled: \(request) for itemID: \(itemID)")
         }
     }
 }
