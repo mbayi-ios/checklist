@@ -14,6 +14,8 @@ The App helps you manage your daily todo tasks.Learning from Ray's book.
 | Screenshots | Screenshots |
 | ----- | ---- |
 |me | me |
+|me | me |
+|me | me |
 
 |<img src="https://user-images.githubusercontent.com/91916741/221280108-2ac14df1-dd15-4c40-b7c5-318c4827acf3.png" width="50%" /> |<img src="https://user-images.githubusercontent.com/91916741/221280108-2ac14df1-dd15-4c40-b7c5-318c4827acf3.png" width="50%" />|
 
