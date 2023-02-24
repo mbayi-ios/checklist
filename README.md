@@ -13,11 +13,11 @@ The App helps you manage your daily todo tasks.Learning from Ray's book.
 
 | Screenshots | Screenshots |
 | ----- | ---- |
-|me | me |
+| <img src="https://user-images.githubusercontent.com/91916741/221280108-2ac14df1-dd15-4c40-b7c5-318c4827acf3.png" width="50%" /> | <img src="https://user-images.githubusercontent.com/91916741/221280108-2ac14df1-dd15-4c40-b7c5-318c4827acf3.png" width="50%" /> |
 |me | me |
 |me | me |
 
-|<img src="https://user-images.githubusercontent.com/91916741/221280108-2ac14df1-dd15-4c40-b7c5-318c4827acf3.png" width="50%" /> |<img src="https://user-images.githubusercontent.com/91916741/221280108-2ac14df1-dd15-4c40-b7c5-318c4827acf3.png" width="50%" />|
+| ||
 
 | <img src="https://user-images.githubusercontent.com/91916741/221280098-f793e756-20ba-46eb-a3be-90cc785f4f54.png" width="50%" /> | <img src="https://user-images.githubusercontent.com/91916741/221280100-61fb8ae6-ca65-4a6d-b79b-412333d34bb4.png" width="50%" /> |
 
